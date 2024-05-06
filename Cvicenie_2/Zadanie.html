@@ -1,0 +1,223 @@
+
+<!-- saved from url=(0048)http://www2.fiit.stuba.sk/oop/c/c02.html#preklad -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Objektovo-orientované programovanie</title>
+
+<meta name="description" content="objektovo-orientované programovanie, Java, AspectJ, návrhové vzory, programovacie jazyky">
+<meta name="category" content="">
+<meta name="Author" content="Valentino Vranić">
+<link rel="stylesheet" type="text/css" href="./Zadanie_files/courses.css">
+</head>
+<body bgcolor="#ffffff">
+<a name="#zac"></a><h3><a name="#zac"></a><a href="http://www2.fiit.stuba.sk/oop/index.html">Objektovo-orientované programovanie, ak. rok 2018/19</a></h3>
+<h1>Cvičenie 2</h1>
+(k prednáške 2)
+<hr>
+<ul>
+<li><a href="http://www2.fiit.stuba.sk/oop/c/c02.html#projekt">Projekt</a></li>
+<li><a href="http://www2.fiit.stuba.sk/oop/c/c02.html#dok">Používanie on-line dokumentácie Java SE API</a></li>
+<li><a href="http://www2.fiit.stuba.sk/oop/c/c02.html#ulohy">Úlohy</a></li>
+<li><a href="http://www2.fiit.stuba.sk/oop/c/c02.html#preklad">Preklad a spustenie programu z príkazového riadku</a></li>
+<p><a href="http://www2.fiit.stuba.sk/oop/c/index.html"><b>späť</b></a></p>
+</ul>
+<hr>
+
+<a name="projekt">
+<h2>Projekt</h2>
+
+</a><p><a name="projekt">Tento týždeň začínate s prácou na projekte. Na prednáške ste sa oboznámili s </a><a href="http://www2.fiit.stuba.sk/oop/projekt/index.html">rámcovou témou projektu</a>.
+Zámer svojho projektu musíte prekonzultovať s vyučujúcim na cvičeniach. Máte možnosť to urobiť na tomto a ďalších troch cvičeníach.
+Aby vám vyučujúci mohol poradiť, musíte prísť s dostatočne rozpracovaným základom a premyslenými otázkami.
+</p>
+<p>Do <a href="http://www2.fiit.stuba.sk/oop/projekt/index.html">stanoveného termínu</a> musíte odovzdať spresnenie zadania do AIS-u.
+Termín je však nastavený tak, že by ste hravo mali zvládnuť odovzdanie v týždennom predstihu, čím získate viac času na realizáciu projektu.
+</p>
+
+
+<a name="dok">
+<h2>Používanie on-line dokumentácie Java SE API</h2>
+
+</a><p><a name="dok">Dokumentácia Java SE je </a><a href="http://www.oracle.com/technetwork/java/javase/documentation/">dostupná na webe.</a> Obsahuje veľa užitočných veci vrátane tutoriálu, kompletných kníh o Jave a príkladov.
+</p>
+<p>Ako už viete, Java prichádza s rozsiahlym API, t. j. rozhraním aplikačného programovania (niekedy označovným ako štandardné knižnice, ale sú to rámce). Aby ste toto rozhranie mohli využiť, potrebujete jeho dokumentáciu. Nájdete ju na spomínanej stránke. Priamy odkaz je:
+<a href="https://docs.oracle.com/javase/9/docs/api/index.html?overview-summary.html">Java Platform, Standard Edition 9: API Specification.</a>
+</p>
+<p>Už ste používali metódu <b>println()</b>. Skúste teraz vyhľadať dokumentáciu tejto metódy. Môžete postupovať napríklad takto. Z použitia tejto metódy v programoch môžete usúdiť, že ide o metódu objektu <b>System.out</b>. Kliknutím na <b>All Classes</b> (vľavo hore) sa vám zobrazí abecedný zoznam všetkých tried (vľavo dole). Nájdite triedu <b>System</b> a kliknite na ňu. Medzi atribútmi tejto triedy je aj atribút <b>out</b>. Kliknutím na tento atribút zistíte, že <b>out</b> je vlastne objekt triedy <b>PrintStream</b>. V dokumentácii tejto triedy môžete nájsť podrobnosti o metóde <b>println()</b>.
+</p>
+<p><a href="http://www2.fiit.stuba.sk/oop/c/c02.html#zac"><b>^</b></a></p>
+<hr>
+
+
+<a name="ulohy">
+<h2>Úlohy</h2>
+</a><p><a name="ulohy">V úlohách budete pracovať s </a><a href="http://www2.fiit.stuba.sk/oop/p/p02/hra2.zip">kódom hry s obrami a rytiermi z prednášky.</a>
+</p>
+<ol>
+<li>Doplňte do všetkých tried obrov konštruktory s energiou ako parametrom (podľa triedy <b>Rytier</b>). Využite možnosť v odvodených triedach obrov zavolať konštruktor triedy, od ktorej dedia pomocou kľúčového slova <b>super()</b>.
+Upravte metódu <b>main()</b> triedy <b>Stret</b> tak, aby využívala konštruktory tried obrov.
+</li>
+
+<li>Podobne ako na minulom cvičení, vytvorte ďalšiu triedu odvodenú od triedy <b>ZlyObor</b> (napr. <b>StrasidelnyObor</b>), v ktorej bude prekonaná metóda <b>zjedz()</b>. Prekonanú metódu <b>zjedz()</b> zavolajte pomocou kľúčového slova <b>super</b>. Po nej nech nasleduje dodatočné správanie, akým by napríklad bolo zavolanie vlastnej novej metódy <b>zarev()</b>, ktorá jednoducho len vypíše hlásenie.
+Zaraďte aj obrov tejto novej triedy do stretu. Treba meniť slučku stretu?
+</li>
+
+<li>Do triedy <b>Stret</b> pridajte metódu
+<blockquote><b>
+	int zratajEnergiu(Energia[] e)
+</b></blockquote>
+ktorá bude schopná zrátať energiu obrov alebo rytierov poskytnutých ako parametre.
+Zavolajte túto metódu v metóde <b>main()</b> a vypíšte jej návratovú hodnotu.
+Tejto metóde musíte poskytnúť pole <b>Energia[]</b> ako parameter. Ak by ste jej chceli poskytnúť vybrané objekty, museli by ste ich obaliť do poľa <b>Energia[]</b> takto:
+<blockquote><b>
+	zratajEnergiu(new Energia[]{o[47], r[2], o[99]});
+</b></blockquote>
+Ak však signatúru metódy uvediete takto:
+<blockquote><b>
+	int zratajEnergiu(Energia... e)
+</b></blockquote>
+čo je zápis pre metódu s premenlivým počtom parametrov, objekty môžete poskytnúť priamo:
+<blockquote><b>
+	zratajEnergiu(o[47], r[2], o[99]);
+</b></blockquote>
+Aj pri takejto signatúre stále môžete poskytnúť pole <b>Energia[]</b>, lebo metódy s premenlivým počtom parametrov sú realizované pomocou polí.
+</li>
+
+
+<li>Organizujte projekt hry do balíkov. Napríklad obrov a rytierov spolu s rozhraním pre energiu zaraďte do balíka <b>postavy</b>, a triedu <b>Stret</b> do balíka <b>game</b>.
+Nový balík v prostredí Eclipse vytvoríte napríklad tak, že pravým tlačidlom kliknete na názov projektu v pohľade <b>Package Explorer</b> a zvolíte <b>New / Package</b>.
+Prvky do balíka stačí potiahnuť.
+Všimnite si, že prostredie hlási chyby. Do každého súboru v balíku musíte pridať klauzulu:
+<blockquote><b>
+	package názov_balíka;
+</b></blockquote>
+Do každého súboru, ktorý využíva prvky tohto balíka musíte pridať klauzulu, ktorou tento balík sprístupníte:
+<blockquote><b>
+	import názov_balíka.*;
+</b></blockquote>
+Inak budete musieť používať plne kvalifikované názvy, ako napríklad:
+<blockquote><b>
+	postavy.Obor[] o = new postavy.Obor[100];
+</b></blockquote>
+Otvorte zdrojový kód a všimnite si jeho adresárovú štruktúru.
+</li>
+
+
+<li>Všimnite si, že sa mimo triedy <b>Rytier</b> už nedá pristúpiť k jej atribútu <b>energia</b>.
+Nastavte aj atribútom <b>energia</b> a <b>hladny</b> triedy <b>Obor</b> prístup <b>private</b>. Ako zabezpečíte prístup k týmto atribútom?
+Čo by bolo potrebné upraviť, ak by atribút <b>energia</b> triedy <b>Obor</b> mal byť vnútorne reprezentovaný ako <b>float</b>, pričom by zvyšok hry s týmto atribútom naďalej pracoval ako keby bol typu <b>int</b>?
+</li>
+
+
+<li>Zrušte označenie komentára atribútu <b>hladny</b> triedy <b>ZlyObor</b>. Vyskúšajte game obrov a rytierov. Všimnite si, že žiaden obor rytiera nezje. Toto je dôsledkom javu, ktorý sa volá <i>skrývanie</i> atribútov: rovnomenný atribút v odvodenej triede skryje pôvodný. Keďže boolovské atribúty sú implicitne <b>false</b>, podmienený príkaz v metóde <b>zjedz()</b> sa nerealizuje a obor rytiera nezje.
+</li>
+
+
+<li>Po prejdení <a href="http://www2.fiit.stuba.sk/oop/c/c02.html#preklad">inštruktážnej časti k prekladu a spúšťaniu programu z príkazového riadku</a>, skúste preložiť hru s obrami a rytiermi z príkazového riadku alebo aspoň vyhľadajte adresár príslušného Eclipse projektu (v pracovnom adresári Eclipse, tzv. workspace) a všimnite si jeho organizáciu, t. j. štruktúru adresárov a kde sú <b>java</b>, a kde <b>class</b> súbory.
+Spúsťte program z príkazového riadku príkazom <b>java</b>. Ktorú triedu máte pritom uviesť ako parameter?
+
+</li></ol>
+<p><a href="http://www2.fiit.stuba.sk/oop/c/c02.html#zac"><b>^</b></a></p>
+<hr>
+
+
+
+<a name="preklad">
+<h2>Preklad a spustenie programu z príkazového riadku</h2>
+
+
+<p>Pre preklad z príkazového riadku musia byť správne nastavené systémové premenné <b>PATH</b> a <b>CLASSPATH</b>.
+Na počítačoch v CPU by toto malo byť zabezpečené.
+V prípade, že narazite na problémy pri preklade alebo spúšťaní programu, urobte nasledujúce:
+</p>
+	<ol>
+	<li>v menu <b>Start</b> otvorte <b>Control Panel</b> a vyberte <b>User Accounts</b>, a následne <b>Change my Environment Variables</b>
+	</li>
+	<li>v časti <b>User variables</b> vytvorte premennú s názvom <b>PATH</b> s nasledujúcim obsahom: <b>C:\Program Files\Java\jdk1.8.0_[xy]\bin</b> ([xy] nahraďte číslom skutočne inštalovanej verzie); ak taká premenná už jestvuje, pridajte na koniec jej obsahu bodkočiarku a za ňou uvedenú cestu
+	</li>
+	<li>v tej istej časti vytvorte premennú s názvom <b>CLASSPATH</b>, do ktorej uložite iba bodku (značí aktuálny adresár): <b>.</b>; ak taká premenná už jestvuje, pridajte na koniec jej obsahu bodkočiarku a za ňou bodku
+	</li>
+	</ol>
+<p>Zmeny platia len pre novootvorené príkazové riadky.
+Alternatívou k nastaveniu systémovej premennej <b>CLASSPATH</b> je zadávanie cesty k triedam priamo pri preklade prostredníctvom prepínača <b>-classpath</b>.
+</p>
+
+
+<h3>Preklad a spustenie programu <b>HelloWorld.java</b></h3>
+
+</a><p><a name="preklad">Po nastavení ciest, môžete vyskúšať preklad a spustenie programu </a><a href="http://www2.fiit.stuba.sk/oop/c/c01/HelloWorld.java"><b>HelloWorld.java</b></a>.
+Uložte ho do pracovného adresára (vytvorte si vlastný podadresár v adresári, do ktorého môžete zapisovať, pravdepodobne <b>C:\work</b>).
+</p>
+<p>Súbor so zdrojovým kódom môžete otvoriť v Eclipse (cez menu File alebo jednoduchým potiahnutím ikony súboru do okna Eclipse, teda bez vytvárania projektu) alebo v hocijakom editore textu (hoci aj v Notepade). Pre samotný preklad a spustenie programu to samozrejme nie je potrebné.
+</p>
+<p>Samotný preklad spustíte z príkazového riadku, ku ktorému sa dostanete cez menu <b>Start</b> zadaním príkazu <b>cmd</b>. Z neho príkazom
+</p>
+<blockquote>
+<b>javac HelloWorld.java</b>
+</blockquote>
+<p>spustíte preklad programu. Program by sa mal preložiť úspešne, a prekladač by nemal hlásiť nič.
+Prekladom vznikne súbor <b>HelloWorld.class</b>. Ten sa dá spustiť príkazom
+</p>
+<blockquote>
+<b>java HelloWorld</b>
+</blockquote>
+<p>čím sa vypíše pozdrav a dnešný dátum.
+</p>
+
+
+<h3>Preklad a spustenie programu s viacerými balíkmi</h3>
+
+(Na ďalšom cvičení.)
+
+<p>Štruktúra adresárov, v ktorých sa nachádzajú zdrojové a výsledné súbory, musí zodpovedať štruktúre balíkov.
+Stiahnite si <a href="http://www2.fiit.stuba.sk/oop/c/c02/Project1.zip"><b>príklad programu s balíkmi</b></a> a rozbaľte ho do pracovného adresára.
+Týmto by ste mali získať adresár <b>C:\work\Project1</b>) s dvomi zdrojovými súbory. Jeden z nich je <b>Class1.java</b>. Tento súbor obsahuje rovnomennú triedu, ktorá má metódu <b>main()</b>, t. j. dá sa spustiť.
+</p>
+<p>Druhý súbor je <b>ClassP.java</b>. Tento súbor obsahuje tiež jednu, rovnomennú triedu. Na jeho začiatku je deklarované že patrí do balíka <b>my.pack1</b> a preto musí byť umiestnený do adresára <b>my\pack1</b>. <b>Class1.java</b> importuje balík <b>my.pack</b>, ktorý pozostáva z jedinej triedy <b>ClassP</b>.
+
+</p><p>Preložme program <b>javacom</b> z príkazového riadku.
+Otvorte okno príkazového riadku a nastavte sa do adresára <b>C:\work\Project1</b>. Zadajte
+</p>
+<blockquote><b>
+	javac Class1.java
+</b></blockquote>
+
+<p>Ak ste do systémovej premennej <b>classpath</b> nepridali aktuálny adresár, musíte použiť rovnomenný prepínač:
+</p>
+<blockquote><b>
+	javac -classpath . Class1.java
+</b></blockquote>
+
+<p>Po preklade vznikne súbor <b>Class1.class</b>. Spustíte ho jednoducho príkazom:
+</p>
+<blockquote><b>
+	java Class1
+</b></blockquote>
+
+<p>Aj pri spúšťaní programu platí, že ak ste do systémovej premennej <b>classpath</b> nepridali aktuálny adresár, musíte použiť rovnomenný prepínač.
+</p>
+
+<p>Keďže viete že trieda <b>Class1</b> potrebuje triedu <b>ClassP</b>, tušíte že aj súbor <b>ClassP.java</b> musel byť preložený. Presvedčte sa že <b>javac</b> tento preložený súbor umiestnil tam, kde našiel zdrojový, t. j. do adresára <b>C:\work\Project1\my\pack1</b>.
+</p>
+<p>Väčšinou však budete chcieť aby preložené súbory boli oddelené od zdrojových súborov. Vytvorte preto adresár pre zdrojové súbory <b>src</b> a preložené súbory <b>bin</b>. Z adresára <b>src</b> spusťte preklad s uvedením cieľového adresára:
+</p>
+<blockquote><b>
+javac -d C:\work\Project1\bin Class1.java
+</b></blockquote>
+
+<p>V cieľovom adresári nájdete všetky preložené súbory aj so štruktúrou adresárov, ktorá zodpovedá hierarchii balíkov. Aby ste spustili program, musíte sa nastaviť do tohto adresára.
+</p>
+
+<p>Aj keď preklad z príkazového riadku nie je vhodný pre vývoj rozsiahlejších programov – a teda ani pre vaše projekty – dobré je poznať ho. Odporúčané prostredie je Eclipse, ku ktorému ste dostali už na prvom cvičení krátky tutoriál
+(<a href="http://www2.fiit.stuba.sk/oop/c/eclipse_tutorial/index.html">HTML</a>/
+<a href="http://www2.fiit.stuba.sk/oop/c/eclipse_tutorial/eclipse_tutorial.zip">ZIP</a>).
+Na vlastných počítačoch môžete používať aj iné prostredia pre vývoj programov v Jave, ale projekt sa musí dať preložiť v prostredí Eclipse inštalovanom v CPU.
+</p>
+
+<hr>
+<center><i><font color="#808080">
+<script type="text/javascript" src="./Zadanie_files/modified.js.stiahnuť"></script>18-Feb-19 14:47</font></i><font color="#808080"><br>
+<a href="http://fiit.stuba.sk/~vranic/">Valentino Vranić</a><br>
+<a href="mailto:vranic%20at%20stuba.sk">vranic at stuba.sk</a><br>
+</font></center>
+
+</body></html>
